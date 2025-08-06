@@ -1,12 +1,13 @@
 import { useAtom } from "jotai";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { bookmarksAtom } from "../atoms/BlogAtom";
 import { Link } from "react-router-dom";
 import { FaBookmark } from "react-icons/fa";
 
 export default function Bookmarks() {
   const [bookmarks, setBookmarks] = useAtom(bookmarksAtom);
-
+  const navigate = useNavigate();
   useEffect(() => {
     localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
   }, [bookmarks]);
