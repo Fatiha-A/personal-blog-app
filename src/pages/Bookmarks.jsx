@@ -61,7 +61,6 @@ export default function Bookmarks() {
                 className="flex-1 p-2 m-2"
               />
 
-              {/* Content */}
               <div className="p-4 flex-1 flex flex-col justify-center">
                 <p className="text-gray-600 text-sm mb-2 line-clamp-2">
                   {blog.description}
