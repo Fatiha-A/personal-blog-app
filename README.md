@@ -86,6 +86,37 @@ Tool and Purpose
 
 ---
 
+## 🧠 Atom State
+
+### `BlogAtom.js`
+
+```js
+import { atom } from "jotai";
+
+export const blogsAtom = atom([]);
+export const bookmarksAtom = atom([]);
+```
+
+---
+
+## 💾 Local Storage Hook
+
+### `useLocalStorage.js`
+
+```js
+import { useEffect } from "react";
+
+const useLocalStorage = (key, value) => {
+  useEffect(() => {
+    localStorage.setItem(key, JSON.stringify(value));
+  }, [key, value]);
+};
+
+export default useLocalStorage;
+```
+
+---
+
 ## 💻 Installation & Setup
 
 1. Clone the Repository
