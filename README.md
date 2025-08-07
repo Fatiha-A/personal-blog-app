@@ -1,6 +1,42 @@
-# 📝 React Personal Blog App
+# 📝 Personal Blog App
 
-A responsive personal blog application built with React, Tailwind CSS, Jotai, and React Router. This app allows users to view, create, edit, delete, and bookmark blog posts with a clean and user-friendly interface. Built to match a Figma design, it works smoothly across all screen sizes.
+A responsive personal blog application built with React, Tailwind CSS, Jotai, and React Router. This app allows users to view, create, edit, delete, and bookmark blog posts with a clean and user-friendly interface. Built to match a Figma design, All blog data is persisted with localStorage.
+
+---
+
+## 📁 Folder Structure
+
+```
+src/
+│
+├── assets/
+│  └── images, sampleBlogs.js, screenshoots
+│
+├── atoms/
+│   └── BlogAtom.js
+│
+├── components/
+│   ├── BlogCard.jsx
+│   ├── BlogForm.jsx
+│   └── Navbar.jsx
+│
+├── hooks/
+│   └── useLocalStorage.js
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── BlogDetails.jsx
+│   ├── Bookmarks.jsx
+│
+│
+│
+├── App.jsx
+├── main.jsx
+├── App.css
+└── index.css
+```
+
+---
 
 ## Features
 
@@ -22,6 +58,19 @@ A responsive personal blog application built with React, Tailwind CSS, Jotai, an
 - 🎨 Responsive Design
   Clean, mobile-first layout using Tailwind CSS only.
 
+---
+
+## 🎨 Design Reference
+
+This project follows a custom Figma design to ensure a polished and visually consistent user experience. Key design features include:
+
+- Featured blog section (full-width background)
+- Overlay text on blog images.
+- Responsive grid layout for blog cards.
+- Matching fonts and spacing, and color style.
+
+---
+
 ## Tech Stack
 
 Tool and Purpose
@@ -35,18 +84,7 @@ Tool and Purpose
 - localStorage -Persistent client-side data
 - UUID -Unique ID generation for blogs
 
-## Folder Structure
-
-src/
-├── assets/ # Blog images and sample data
-├── atoms/ # Jotai atoms for blog & bookmark state/BlogAtom
-├── components/ # Reusable UI components like Navbar, BlogCard and BlogForm
-├── hooks/ # Custom hook: useLocalStorage
-├── pages/ # All route pages like Home, BlogDetail and Bookmarks
-├── App.jsx # App component with routes
-├── main.jsx # Entry point
-├── App.css # Extra styling if needed
-└── index.css # Tailwind CSS directives
+---
 
 ## 💻 Installation & Setup
 
@@ -69,13 +107,28 @@ bash
 npm run dev
 App will run at 🔗 http://localhost:5173
 
-📷 Screenshots
-screenshots:
-Home Page * src/assets/screenshots/HomePage.png *
-Bookmarks Page * src/assets/screenshots/Bookmarks.png *
-Blog Details Page *src/assets/screenshots/DetailPage.png *
-EditBlog * src/assets/screenshots/Edit.png *
-CreateBlog * src/assets/screenshots/Create.png *
+---
+
+## 📷 Screenshots
+
+Here are some screenshots showcasing the main features and pages of the Personal Blog App:
+
+### 🏠 Home Page
+![Home Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/HomePage.png)
+
+### 🔖 Bookmarks Page
+![Bookmarks Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/Bookmarks.png)
+
+### 📄 Blog Detail
+![Blog Detail Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/DetailPage.png)
+
+### ✏️ Edit Blog
+![Edit Blog Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/Edit.png)
+
+### 📝 Create Blog
+![Create Blog Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/Create.png)
+
+---
 
 Usage Instructions
 ● Home page View all recent blogs and featured blog.
@@ -102,23 +155,20 @@ Future Improvements
 ● Add Pagination / infinite scroll
 ● Backend integration
 ● Better animations & loading states
+---
 
-🔗 Live Demo
-🌍 https://personal-blog-app-pearl.vercel.app/
+## 🔗 Live Demo
+[https://personal-blog-app-pearl.vercel.app/](https://personal-blog-app-pearl.vercel.app/)
 
-🎨 Design Reference
-This project follows a custom Figma design to ensure a polished and visually consistent user experience. Key design features include:
-- Featured blog section (full-width background)
-- Overlay text on blog images.
-- Responsive grid layout for blog cards.
-- Matching fonts and spacing, and color style.
+---
 
 License
 This project is open-source and available under the MIT License.
-
+---
   Contact
  Created by Fatiha
-📧 fethiaawol@gmail.com
+📧 **fethiaawol@gmail.com**
 🔗 GitHub Profile
+
 
 ```
