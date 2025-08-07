@@ -71,11 +71,11 @@ App will run at 🔗 http://localhost:5173
 
 📷 Screenshots
 screenshots:
-Home Page * *
-Create Blog Page * *
-Blog Details Page * *
-EditBlog * *
-CreateBlog * *
+Home Page * src/assets/screenshots/HomePage.png *
+Bookmarks Page * src/assets/screenshots/Bookmarks.png *
+Blog Details Page *src/assets/screenshots/DetailPage.png *
+EditBlog * src/assets/screenshots/Edit.png *
+CreateBlog * src/assets/screenshots/Create.png *
 
 Usage Instructions
 ● Home page View all recent blogs and featured blog.
