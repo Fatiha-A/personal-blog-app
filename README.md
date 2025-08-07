@@ -1,6 +1,29 @@
 # 📝 Personal Blog App
 
-A responsive personal blog application built with React, Tailwind CSS, Jotai, and React Router. This app allows users to view, create, edit, delete, and bookmark blog posts with a clean and user-friendly interface. Built to match a Figma design, All blog data is persisted with localStorage.
+A clean, responsive, and user-friendly personal blog application built with **React**, **Tailwind CSS**, **Jotai**, and **Vite**. Users can create, edit, delete, and bookmark blog posts. All data persists using `localStorage`.
+
+---
+
+## 🚀 Features
+
+- 📰 View all blog posts (Home Page)
+- ⭐ Bookmark blogs to save for later
+- ➕ Create a new blog using a modal form
+- 📝 Edit blog posts inline
+- 🗑️ Delete blog posts inline
+- 🔍 Search through blog posts by title or author
+- 💾 Persistent storage using `localStorage`
+- 🎨 Responsive design with Tailwind CSS
+
+---
+
+## 🛠️ Tech Stack
+
+- React (Vite)
+- Tailwind CSS
+- Jotai (global state management)
+- localStorage (persistent storage)
+- React Router DOM (page routing)
 
 ---
 
@@ -9,13 +32,14 @@ A responsive personal blog application built with React, Tailwind CSS, Jotai, an
 ```
 src/
 │
-├── assets/
-│  └── images, sampleBlogs.js, screenshoots
+├── assets/              # Images & sample data
+│   └── screenshots/     # Project screenshots
+│   └── sampleBlogs.js
 │
-├── atoms/
+├── atoms/               # Jotai blog atom state
 │   └── BlogAtom.js
 │
-├── components/
+├── components/          # Reusable components
 │   ├── BlogCard.jsx
 │   ├── BlogForm.jsx
 │   └── Navbar.jsx
@@ -23,170 +47,103 @@ src/
 ├── hooks/
 │   └── useLocalStorage.js
 │
-├── pages/
+├── pages/               # Main pages
 │   ├── Home.jsx
-│   ├── BlogDetails.jsx
 │   ├── Bookmarks.jsx
+│   └── BlogDetails.jsx
 │
-│
-│
-├── App.jsx
-├── main.jsx
+├── App.jsx              # Main app component with routes
+├── main.jsx             # App entry point
 ├── App.css
 └── index.css
 ```
 
 ---
 
-## Features
+## 🖼️ Screenshots
 
-- 🏠 _Home Page_
-- Displays a featured blog and a list of recent blogs in a responsive layout.
-- 📝 _Create Blog Post_
-  Add new posts using a reusable blogform component.
-- ✏️ _Edit Blog Post_
-  with pre-filled blogform data
-- 🗑️ _Dlete blog post_
-  remove Blog Post with confirmation
-  Bookmark Blogs
-- 🔖 save and view them on a saved page
-- 🔗 Dynamic Routing
-  Navigate between pages like Home, Blog Details, and Bookmarks using React Router.
-- 🧠 Global State with Jotai
-  All blog data and bookmarks are shared across components via atoms.
-- 💾 Persistent Storage using `localStorage`
-- 🎨 Responsive Design
-  Clean, mobile-first layout using Tailwind CSS only.
+| Page         | Screenshot                                                                                                          |
+| ------------ | ------------------------------------------------------------------------------------------------------------------- |
+| Home Page    | ![Home](https://github.com/Fatiha-A/personal-blog-app/blob/main/src/assets/screenshots/HomePage.png?raw=true)       |
+| Bookmarks    | ![Bookmarks](https://github.com/Fatiha-A/personal-blog-app/blob/main/src/assets/screenshots/Bookmarks.png?raw=true) |
+| Blog Details | ![Details](https://github.com/Fatiha-A/personal-blog-app/blob/main/src/assets/screenshots/DetailPage.png?raw=true)  |
+| Edit Blog    | ![Edit](https://github.com/Fatiha-A/personal-blog-app/blob/main/src/assets/screenshots/Edit.png?raw=true)           |
+| Create Blog  | ![Create](https://github.com/Fatiha-A/personal-blog-app/blob/main/src/assets/screenshots/Create.png?raw=true)       |
 
 ---
 
-## 🎨 Design Reference
+## 🧭 Pages
 
-This project follows a custom Figma design to ensure a polished and visually consistent user experience. Key design features include:
+- **Home**: View all blogs, featured blog, and responsive grid layout.
+- **Blog Details**: Shows full blog content with title, author, date, and image.
+- **Bookmarks**: Saved blog posts for later reading.
 
-- Featured blog section (full-width background)
-- Overlay text on blog images.
-- Responsive grid layout for blog cards.
-- Matching fonts and spacing, and color style.
-
----
-
-## Tech Stack
-
-Tool and Purpose
-
-- React -Frontend UI framework
-- Vite -Fast dev/build setup
-- React Router DOM -Page navigation
-- Jotai -Global state management
-- Tailwind CSS -Utility-first responsive styling
-- React Icons -Icons for UI e;ements
-- localStorage -Persistent client-side data
-- UUID -Unique ID generation for blogs
+> ✅ Note: Blog creation and editing are done inline via modal — not separate pages.
 
 ---
 
-## 🧠 Atom State
+## 🧩 Components
 
-### `BlogAtom.js`
-
-```js
-import { atom } from "jotai";
-
-export const blogsAtom = atom([]);
-export const bookmarksAtom = atom([]);
-```
+- `BlogForm.jsx`: Reusable form for creating/editing blogs (modal)
+- `BlogCard.jsx`: Card UI for displaying blog info
+- `Navbar.jsx`: Navigation bar with page links
 
 ---
 
-## 💾 Local Storage Hook
+## 💾 Persistent Storage
 
-### `useLocalStorage.js`
-
-```js
-import { useEffect } from "react";
-
-const useLocalStorage = (key, value) => {
-  useEffect(() => {
-    localStorage.setItem(key, JSON.stringify(value));
-  }, [key, value]);
-};
-
-export default useLocalStorage;
-```
+Uses a custom `useLocalStorage()` hook to store blogs and bookmarks across sessions.
 
 ---
 
 ## 💻 Installation & Setup
 
-1. Clone the Repository
-   You can use 'VS Code Source Control tab' or run in terminal:
+### 1. Clone the repository
+
+You can use 'VS Code Source Control tab' or run in terminal:
 
 ```bash
 git clone https://github.com/Fatiha-A/personal-blog-app.git
 cd personal-blog-app
+```
 
-2. Install Dependencies
-bash
+### 2. Install dependencies
+
+```bash
 npm install
-or with Yarn:
-bash
-yarn install
+```
 
-3. Start the App
-bash
+### 3. Run the development server
+
+```bash
 npm run dev
 App will run at 🔗 http://localhost:5173
-
----
-
-## 📷 Screenshots
-
-Here are some screenshots showcasing the main features and pages of the Personal Blog App:
-
-### 🏠 Home Page
-![Home Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/HomePage.png)
-
-### 🔖 Bookmarks Page
-![Bookmarks Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/Bookmarks.png)
-
-### 📄 Blog Detail
-![Blog Detail Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/DetailPage.png)
-
-### ✏️ Edit Blog
-![Edit Blog Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/Edit.png)
-
-### 📝 Create Blog
-![Create Blog Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/Create.png)
-
----
-localStorage
-● React Router used for all navigation
-● Routing with useParams & useNavigate
-Dynamic routes for blog details and editing.
-● Tailwind CSS for responsive layout and styling
-
-Future Improvements
-● Add user login/signup (authentication)
-● Add rich text editor support
-● Enable Image uploads
-● Add Pagination / infinite scroll
-● Backend integration
-● Better animations & loading states
----
-
-## 🔗 Live Demo
-[https://personal-blog-app-pearl.vercel.app/](https://personal-blog-app-pearl.vercel.app/)
-
----
-
-License
-This project is open-source and available under the MIT License.
----
-  Contact
- Created by Fatiha
-📧 **fethiaawol@gmail.com**
-🔗 GitHub Profile
-
-
 ```
+
+---
+
+## 🎨 Design Reference
+
+This app was inspired by a custom **Figma** design with:
+
+- ✅ Featured blog section (full-width)
+- ✅ Overlay text on blog images
+- ✅ Responsive grid layout
+- ✅ Matching fonts and spacing
+
+---
+
+## 🌐 Live Demo
+
+🔗 [https://personal-blog-app-pearl.vercel.app](https://personal-blog-app-pearl.vercel.app)
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+## 👩‍💻 Author
+
+Created by Fethya Awol
+
+📧 **fethyaawol19@gmail.com**  
+🔗 GitHub: [Fatiha-A](https://github.com/Fatiha-A)
