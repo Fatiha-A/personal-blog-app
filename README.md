@@ -138,20 +138,29 @@ bash
 npm run dev
 App will run at 🔗 http://localhost:5173
 
+---
 
-Usage Instructions
-● Home page View all recent blogs and featured blog.
-●Click a blog to view full details
-● Edit or delete from blog details page
-● Use the bookmark icon to add or remove blogs from your bookmarks.
-● Visit "Saved" page to view bookmarked blogs
-● Navigate to /post a blog  and use create blog form in home to publish new posts
-● Data is saved in localStorage and persists after refresh
+## 📷 Screenshots
 
-Key Concepts
-● Reusable BlogForm used for both Creating and Editing blogs.
-● Jotai atoms manage global blog/bookmark state
-● Custom hook keeps state synced with localStorage
+Here are some screenshots showcasing the main features and pages of the Personal Blog App:
+
+### 🏠 Home Page
+![Home Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/HomePage.png)
+
+### 🔖 Bookmarks Page
+![Bookmarks Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/Bookmarks.png)
+
+### 📄 Blog Detail
+![Blog Detail Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/DetailPage.png)
+
+### ✏️ Edit Blog
+![Edit Blog Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/Edit.png)
+
+### 📝 Create Blog
+![Create Blog Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/Create.png)
+
+---
+localStorage
 ● React Router used for all navigation
 ● Routing with useParams & useNavigate
 Dynamic routes for blog details and editing.
