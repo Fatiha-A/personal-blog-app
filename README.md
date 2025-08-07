@@ -138,28 +138,6 @@ bash
 npm run dev
 App will run at 🔗 http://localhost:5173
 
----
-
-## 📷 Screenshots
-
-Here are some screenshots showcasing the main features and pages of the Personal Blog App:
-
-### 🏠 Home Page
-![Home Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/HomePage.png)
-
-### 🔖 Bookmarks Page
-![Bookmarks Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/Bookmarks.png)
-
-### 📄 Blog Detail
-![Blog Detail Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/DetailPage.png)
-
-### ✏️ Edit Blog
-![Edit Blog Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/Edit.png)
-
-### 📝 Create Blog
-![Create Blog Page](https://raw.githubusercontent.com/Fatiha-A/personal-blog-app/main/src/assets/screenshots/Create.png)
-
----
 
 Usage Instructions
 ● Home page View all recent blogs and featured blog.
